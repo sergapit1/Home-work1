@@ -24,17 +24,31 @@ public class CalculatorWithOperator {
     }
 
     public double modul(double a) {
-        result = Math.abs(a);
-        return result;
+        if (a < 0) {
+            return -a;
+        } else {
+            return a;
+        }
+
     }
 
     public double square(double c, double exp) {
-        result = Math.pow(c, exp);
+        double result = 1;
+        for (int i = 0; i <= exp; i++) {
+            result = result * c;
+        }
         return result;
     }
 
-    public double sqrt(double d, double exp) {
-        result = Math.pow(d, (double) 1 / exp);
-        return result;
+    //result = Math.pow(c, exp);
+    //  return result;
+
+
+    public double sqrt(int d, int exp) {
+        return square(d, 1 / exp);
+        //  return d ^ exp;
+        // result = Math.pow(d, (double) 1 / exp);
+
+        // return result;
     }
 }
